@@ -1,0 +1,14 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:five="http://namespaces.zope.org/five"
+  i18n_domain="eea">
+
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <browser:jbot
+    directory="templates"
+    layer="emrt.necd.interfaces.IBrowserLayer"
+    />
+
+</configure>
+
