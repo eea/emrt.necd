@@ -1,13 +1,15 @@
 <configure
   xmlns="http://namespaces.zope.org/zope"
   xmlns:five="http://namespaces.zope.org/five"
+  xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
-  <include package="z3c.jbot" file="meta.zcml" />
-
-  <browser:jbot
-    directory="templates"
+  <browser:page
+    for="esdrt.content.reviewfolder.IReviewFolder"
+    name="view"
+    class=".reviewfolder.NECDReviewFolderView"
     layer="emrt.necd.interfaces.IBrowserLayer"
+    permission="zope2.View"
     />
 
 </configure>

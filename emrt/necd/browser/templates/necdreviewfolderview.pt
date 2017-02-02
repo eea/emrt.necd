@@ -291,11 +291,11 @@
           </div>
         </div>
         <div class="row" style="padding-top:30px">
-          <div class="cell position-1 width-3 esdLabel">CRF category code</div>
+          <div class="cell position-1 width-3 esdLabel">NFR category code</div>
         </div>
         <div class="row">
           <div class="cell position-1 width-9 esdLabel">
-            <select id="crfFilter" class="chosen-select" data-placeholder="Select CRF category code">
+            <select id="crfFilter" class="chosen-select" data-placeholder="Select NFR category code">
               <option></option>
               <tal:block tal:repeat="item view/get_crf_categories">
                 <option
@@ -343,8 +343,6 @@
                 tal:define="step python:'';
                             step request/step | step">
               <option></option>
-             <option tal:attributes="selected python:'step1'==step"
-                value="step1">Step1</option>
               <option tal:attributes="selected python:'step2'==step"
                 value="step2">Step2</option>
             </select>
@@ -354,10 +352,10 @@
                 tal:define="wfStatus python:'';
                             wfStatus request/wfStatus | wfStatus">
               <option></option>
-             <option tal:attributes="selected python:'SRRE'==wfStatus"
-                value="SRRE">Sector Reviewer / Review Expert</option>
-              <option tal:attributes="selected python:'LRQE'==wfStatus"
-                value="LRQE">Lead Reviewer / Quality Expert</option>
+              <option tal:attributes="selected python:'LR'==wfStatus"
+                value="LR">Lead Reviewer</option>
+              <option tal:attributes="selected python:'LR'==wfStatus"
+                value="SE">Sector Expert</option>
               <option tal:attributes="selected python:'MSC'==wfStatus"
                 value="MSC">MS Coordinator</option>
               <option tal:attributes="selected python:'answered'==wfStatus"

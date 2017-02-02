@@ -1,6 +1,6 @@
 from zope.interface import Interface
 
 
-class IBrowserLayer(Interfaces):
+class IBrowserLayer(Interface):
     """ Browser layer for emrt.necd.
     """
